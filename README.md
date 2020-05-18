@@ -7,7 +7,7 @@
 
 ![Probabilistic Framework Abstract](/assets/graphical_abstract.png)
 
-We implement a Bayesian Inference approach to calibrate the material parameters of a model for the superelastic deformation of NiTi shape memory alloy. We specify a diamond-shaped specimen geometry that is suited to calibrate both tensile and compressive material parameters from a single test. We adopt the Bayesian Inference calibration scheme to take full-field strain measurements obtained using digital image correlation together with global load data as an input for calibration. The calibration itself is performed by comparing the full-field strain data and global load with the corresponding results from a simulation library. We present a machine learning based approach to enrich the simulation library and improve the calibration accuracy. This approach is versatile and can be used to calibrate other models of superelastic deformation from data obtained using various modalities. This probabilistic calibration approach can become an integral part of a framework to assess and communicate the risk-informed credibility of simulations performed in the design of superelastic NiTi articles such as medical devices.
+We implement a Bayesian Inference approach to calibrate the material parameters of a model for the superelastic deformation of NiTi shape memory alloy. We specify a diamond-shaped specimen geometry that is suited to calibrate both tensile and compressive material parameters from a single test. We adopt the Bayesian Inference calibration scheme to take full-field strain measurements obtained using digital image correlation together with global load data as an input for calibration. The calibration itself is performed by comparing the experimentally measured quantities of interest -- strain data at select locations and global load -- with the corresponding results from a simulation library. We present a machine learning based approach to enrich the simulation library and improve the calibration accuracy. This approach is versatile and can be used to calibrate other models of superelastic deformation from data obtained using various modalities. This probabilistic calibration approach can become an integral part of a framework to assess and communicate the risk-informed credibility of simulations performed in the design of superelastic NiTi articles such as medical devices.
 
 Matlab code to execute the full calibration pipeline is presented here. For details see the research article describing the method.
 
@@ -15,13 +15,17 @@ Matlab code to execute the full calibration pipeline is presented here. For deta
 
 Harshad M. Paranjape, Kenneth I. Aycock, Craig Bonsignore, Jason D. Weaver, Brent A. Craven, Thomas W. Duerig. "A Probabilistic Approach with Built-in Uncertainty Quantification for the Calibration of a Superelastic Constitutive Model from Full-field Strain Data." Under review.
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
+
+Below are pre-requisite tools to perform the material parameter calibration described here.
+* Matlab with Image Processing Toolbox and Statistics and Machine Learning Toolbox.
+* A diamond specimen with the geometry specified in the engineering drawing `data/NDC-56-03018_rev3_25102018_00.pdf`. This specimen should be laser-cut and heat treated from the material to which the model is to be calibrated.
+* Instron or similar load frame to perform tension experiments on the specimen.
+* A 2D digital image correlation (DIC) setup including tools for speckle pattern application on the diamond, digital camera, lighting, and other supporting equipment.
+* NCORR DIC data processing software for Matlab.
+* Matlab source code in this repository.
+
+
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
