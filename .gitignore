@@ -1,1 +1,3 @@
-.DS_STORE
+.gitignore
+**/.DS_STORE
+**/.DS_Store

@@ -62,6 +62,12 @@ Set `process_mode = 3;` in `NitinolBayesCal.m` and run the script.
 
 ### Step 4: Perform Least-squares Calibration
 
+![Error in least-squares calibration](/assets/fig_diamond_error.jpeg)
+
+This step in the analysis will provide the results of a least-squares calibration. An objective function is defined that depends on the experimental QoI and simulated QoI from each simulation in the library. The material parameters in the simulation library that minimize the objective function are reported.
+
+Set `process_mode = 4;` in `NitinolBayesCal.m` and run the script. The calibration results will be printed and a plot of objective function vs. each of the material parameter value as shown above will be printed.
+
 ### Step 5: Perform Calibration using Bayesian Inference
 
 ### Step 6: Fit a Surrogate Model to Simulation QoI using Machine Learning
