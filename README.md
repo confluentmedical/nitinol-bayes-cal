@@ -5,7 +5,7 @@
 
 ## Introduction
 
-![Probabilistic Framework Abstract](/assets/graphical_abstract.png){:width="60%"}
+![Probabilistic Framework Abstract](/assets/graphical_abstract.jpeg)
 
 We implement a Bayesian Inference approach to calibrate the material parameters of a model for the superelastic deformation of NiTi shape memory alloy. We specify a diamond-shaped specimen geometry that is suited to calibrate both tensile and compressive material parameters from a single test. We adopt the Bayesian Inference calibration scheme to take full-field strain measurements obtained using digital image correlation together with global load data as an input for calibration. The calibration itself is performed by comparing the experimentally measured quantities of interest -- strain data at select locations and global load -- with the corresponding results from a simulation library. We present a machine learning based approach to enrich the simulation library and improve the calibration accuracy. This approach is versatile and can be used to calibrate other models of superelastic deformation from data obtained using various modalities. This probabilistic calibration approach can become an integral part of a framework to assess and communicate the risk-informed credibility of simulations performed in the design of superelastic NiTi articles such as medical devices.
 
@@ -38,7 +38,7 @@ Below are pre-requisite tools to perform the material parameter calibration desc
 
 ### Step 1: Process Experimental Data
 
-![Diamond with speckle pattern](/assets/fig_diamond.png){:width="40%"}
+![Diamond with speckle pattern](/assets/fig_diamond.jpeg)
 
 The purpose of this step is to obtain full-field surface strain data during a tensile test. Experimental quantities of interest (QoI) will be extracted from this data and calibration will be subsequently performed against these QoI.
 
