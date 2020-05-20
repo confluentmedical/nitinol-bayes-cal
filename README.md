@@ -70,9 +70,29 @@ Set `process_mode = 4;` in `NitinolBayesCal.m` and run the script. The calibrati
 
 ### Step 5: Perform Calibration using Bayesian Inference
 
+The purpose of this step is to perform a [Markov Chain Monte Carlo](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50) (MCMC) sampling of the posterior probability distribution (i.e., the probability distribution of fitted material parameters) and obtain median, MAP, credible interval values.
+
+Set `process_mode = 5;` in `NitinolBayesCal.m`. Make sure that the ranges of the variables `E_a`, `E_m` etc. are the same as those in `process_mode = 2` block are a subset of the values in `process_mode = 2`. Run the script. The sampler will show a progress bar and final results will be printed in a few minutes. A corner plot of the marginal posterior distributions of the fitted parameters will also be displayed. While calibrated material parameters can be obtained using this procedure, a more credible values may be obtained by performing the following two steps.
+
 ### Step 6: Fit a Surrogate Model to Simulation QoI using Machine Learning
 
+In this step, the Matlab script fits an array of [support vector machine](https://www.mathworks.com/help/stats/understanding-support-vector-machine-regression.html) models that map the six material parameters to QoIs. Thus, we develop a surrogate model that can be used to efficiently predict the QoIs for any input material parameters (even those that are not present in the simulation library).
+
+Set `process_mode = 6;` in `NitinolBayesCal.m` and execute the script. The fitting and optimization procedure will take several minutes.
+
 ### Step 7: Perform Calibration using the Surrogate Model and Bayesian Inference
+
+The goal of this final step is to perform MCMC sampling using the surrogate model fitted the step above.
+
+Set `process_mode = 5;` in `NitinolBayesCal.m` and run the script. A progress bar will be displayed and the results will be printed after a few minutes.
+
+![A corner plot of sampled posterior density distribution](/assets/fig_cornerplot.jpeg)
+
+## Acknowledgement
+
+This application uses Open Source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
+* The [NCORR](https://ncorr.com/) digital image correlation package.
+* [GWMCMC](https://github.com/grinsted/gwmcmc) sampler implementation in Matlab by Aslak Grinsted.
 
 ## License
 
