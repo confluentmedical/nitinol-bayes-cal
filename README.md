@@ -21,7 +21,7 @@ Matlab code to execute the full calibration pipeline is presented here. For deta
 
 ### Publication
 
-Harshad M. Paranjape, Kenneth I. Aycock, Craig Bonsignore, Jason D. Weaver, Brent A. Craven, Thomas W. Duerig. "A Probabilistic Approach with Built-in Uncertainty Quantification for the Calibration of a Superelastic Constitutive Model from Full-field Strain Data." Under review.
+Paranjape, Harshad M., Kenneth I. Aycock, Craig Bonsignore, Jason D. Weaver, Brent A. Craven, and Thomas W. Duerig. 2021. “A Probabilistic Approach with Built-in Uncertainty Quantification for the Calibration of a Superelastic Constitutive Model from Full-Field Strain Data.” Computational Materials Science 192 (May): 110357. https://doi.org/10.1016/j.commatsci.2021.110357.
 
 ## Prerequisites
 
